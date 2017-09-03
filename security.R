@@ -15,7 +15,6 @@ getinfo <- function(txt = ""){
   } else {
     # CPE or Exploit
     cpes <- dds$cpes[agrep(pattern = tolower(txt), x = dds$cpes$title), c("cpe.23")]
-    print(cpes)
     xplt <- exploitdb[agrep(pattern = txt, x = exploitdb$software, ignore.case = T),]
     xplt <- xplt[order(as.Date.POSIXct(xplt$date), decreasing = T),]
     info <- list(xplt, cpes)

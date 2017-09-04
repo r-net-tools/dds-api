@@ -14,4 +14,4 @@ rm(netsec.data)
 
 # Start API
 r <- plumb("security.R")
-r$run(port=8000)
+r$run(port=7374)
